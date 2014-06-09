@@ -46,5 +46,28 @@ void CFileManager::Init(string szPath)
 
 int CFileManager::GetLine(string &szLine)
 {
+	vector<CFile * >::iterator iter;
+	for(iter = m_vfFiles.begin(); iter != m_vfFiles.end(); iter ++)
+	{
+		if((CFile*)(*iter)->m_file.is_open())
+		{
+		
+		
+			char buf[1024];
+		//	(CFile*)(*iter)->m_file.getline(buf, sizeof(buf));
+// 			int len = ServerData.m_ReadFile.gcount();
+// 			int cur = ServerData.m_ReadFile.tellg();
+// 			if (cur != -1)
+// 			{
+// 				ServerData.m_iCurPos = cur;
+// 			}
+// 			else
+// 			{
+// 				ServerData.m_ReadFile.clear();
+// 			}
+// 			ServerData.m_ReadFile.seekg(ServerData.m_iCurPos);
+			cout<<buf<<endl;	
+		}
+	}
 	return 0;
 }
