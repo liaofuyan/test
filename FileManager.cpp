@@ -52,7 +52,6 @@ int CFileManager::GetLine(string &szLine)
 		if((CFile*)(*iter)->m_file.is_open())
 		{
 		
-		
 			char buf[1024];
 		//	(CFile*)(*iter)->m_file.getline(buf, sizeof(buf));
 // 			int len = ServerData.m_ReadFile.gcount();
